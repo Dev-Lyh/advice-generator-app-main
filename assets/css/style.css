@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Passion+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 26%, 16%);
+
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.6rem;
+  font-family: "Manrope", sans-serif;
+
+  background-color: var(--dark-blue);
+}
+
+#container {
+  width: 54rem;
+  min-height: 33.2rem;
+  padding: 5.3rem;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 1.2rem;
+  position: relative;
+}
+#advice-id {
+  color: var(--neon-green);
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 0.32rem;
+  margin-bottom: 2.4rem;
+}
+#advice-string {
+  color: var(--light-cyan);
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
+}
+#advice-string::before {
+  content: '" ';
+  font-family: "Passion One", cursive;
+  color: var(--light-cyan);
+  font-weight: 400;
+}
+#advice-string::after {
+  content: ' "';
+  font-family: "Passion One", cursive;
+  color: var(--light-cyan);
+  font-weight: 400;
+}
+#reload {
+  text-align: center;
+  position: absolute;
+  bottom: -3.2rem;
+  z-index: 5;
+  width: 6.4rem;
+  height: 6.4rem;
+  left: 44.9%;
+  background-color: var(--neon-green);
+  border: none;
+  border-radius: 3.2rem;
+  cursor: pointer;
+  box-shadow: 0 0 2rem 1rem hsla(150, 100%, 66%, 00%);
+
+  transition: all 0.4s ease-in-out;
+}
+#reload:hover {
+  box-shadow: 0 0 2rem 1rem hsla(150, 100%, 66%, 50%);
+  filter: brightness(1.2);
+
+  transition: all 0.8s ease-in-out;
+}
+
+@media screen and (max-width: 573px) {
+  #container {
+    width: 100%;
+    min-height: 33.4rem;
+    margin: 0 1rem;
+    padding: 4rem;
+    background-color: var(--dark-grayish-blue);
+    border-radius: 1.2rem;
+    position: relative;
+  }
+  .img-0 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  #advice-string {
+    font-size: 2rem;
+  }
+  #container {
+    min-height: 5.4rem;
+  }
+  #reload {
+    bottom: -3.2rem;
+    left: 41%;
+  }
+  #advice-id {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  #advice-string {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  #reload {
+    left: 38%;
+  }
+}
